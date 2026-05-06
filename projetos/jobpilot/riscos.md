@@ -56,7 +56,7 @@
 | Risco | Probabilidade | Impacto | Severidade | Mitigação |
 |-------|---------------|---------|------------|-----------|
 | **Execução noturna consume recursos** | Alta | Baixo | 🟢 Baixo | Scheduling em horário de baixa activity |
-| **Playwright memory leak** | Média | Médio | 🟡 Médio | Restart периодический processes |
+| **Playwright memory leak** | Média | Médio | 🟡 Médio | Restart periódico de processos |
 | **Falha de rede durante scraping** | Alta | Médio | 🟡 Médio | Retry logic, resume from checkpoint |
 
 ---
@@ -134,7 +134,7 @@
 
 ### Médio Prazo
 7. **Implementar proxy rotation** — para scraping em escala
-8. **Adicionar监控系统** — alertas de scraper quebrado
+8. **Adicionar sistema de monitoramento** — alertas de scraper quebrado
 9. **Review de LGPD** — adequação de manejo de dados
 
 ---

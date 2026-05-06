@@ -33,7 +33,7 @@ O objetivo deste plano de testes é documentar os cenários testados, os bugs id
 
 ---
 
-## 4. Bugs已知 e Status
+## 4. Bugs Conhecidos e Status
 
 | Bug ID | Descrição | Severidade | Status |
 |---|---|---|---|

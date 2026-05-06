@@ -957,7 +957,7 @@ Então o sistema deve permitir o cadastro do veículo associado ao cliente
 3. Preencher dados do veículo
 4. Clicar em "Salvar Cadastro"
 
-**Resultado esperado:** O sistema deve salvar o cliente вместе com o veículo associado.
+**Resultado esperado:** O sistema deve salvar o cliente junto com o veículo associado.
 
 **Resultado obtido:** Sistema permitiu o cadastro do veículo associado ao cliente.
 

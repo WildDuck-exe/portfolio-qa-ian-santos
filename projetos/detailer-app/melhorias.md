@@ -14,7 +14,7 @@
 - **MELHORIA-001**: Padronização de idioma — melhoria cosmétic funcional
 
 ### Melhorias de Autenticação (2)
-- **MELHORIA-002**: Login com Google — funcionalidade prometida mas não реализована
+- **MELHORIA-002**: Login com Google — funcionalidade prometida mas não implementada
 - **MELHORIA-003**: Validação de email no cadastro — melhoria de segurança
 
 ### Priorização

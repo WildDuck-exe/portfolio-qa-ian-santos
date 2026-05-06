@@ -171,7 +171,7 @@ Projeto_Klipper/
 | `dias_trabalho` | `1,2,3,4,5,6` | Dias ativos (0=Dom) |
 | `pausa_inicio` | `12:00` | Bloqueio de horário |
 | `pausa_fim` | `13:00` | Bloqueio de horário |
-| `whatsapp_mensagem` | Template | Mensagem 自动 |
+| `whatsapp_mensagem` | Template | Mensagem automática |
 | `whatsapp_mensagem_pausa` | Template | Mensagem durante pausa |
 | `whatsapp_mensagem_fechado` | Template | Mensagem fora do expediente |
 | `whatsapp_mensagem_cancelamento` | Template | Mensagem de cancelamento |

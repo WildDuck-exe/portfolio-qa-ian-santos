@@ -29,7 +29,7 @@ Este plano de regressão tem como objetivo garantir que as correções aplicadas
 |---|---|---|
 | 1 | Acessar módulo de comissões | Tela de comissões carrega corretamente |
 | 2 | Cadastrar serviço com percentual de comissão diferente de 40% | Sistema aceita e salva o valor configurado |
-| 3 | Realizar agendamento com profissional vinculado | Comissão calculada conforme配置ado |
+| 3 | Realizar agendamento com profissional vinculado | Comissão calculada conforme configurado |
 | 4 | Verificar extrato de comissão do profissional | Valor corresponde ao percentual correto |
 
 **Status para regressão:** Aguardando correção

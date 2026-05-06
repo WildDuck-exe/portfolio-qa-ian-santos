@@ -36,8 +36,12 @@ Sou **Ian Santos**, estudante de **Engenharia de Software**, em transição ativ
 | [**Klipper**](./projetos/klipper/) | 🎓 Projeto de extensão | 35+ planejados | 9 bugs | Ecossistema Flask + Flutter + Chat Web + Bot WhatsApp |
 | [**JobPilot**](./projetos/jobpilot/) | 🤖 Projeto autoral com IA | 35+ planejados | 5 gaps | QA em sistema de automação com scraping e IA |
 
-### Destaques por Projeto
+### 🎯 Metodologia Híbrida (Diferencial)
+Neste portfólio, demonstro domínio sobre duas abordagens diferentes de documentação de testes, adaptando-me à necessidade do projeto:
+- **Abordagem Detalhada (BDD):** No *Detailer App*, apresento 42 casos de teste escritos passo-a-passo (Pré-condição, Passos, Resultado), ideal para automação e projetos complexos.
+- **Abordagem Ágil (Matriz):** No *Klipper* e *JobPilot*, utilizo tabelas de cenários embutidas diretamente no Plano de Testes, ideal para *squads* ágeis que exigem documentação enxuta e leitura rápida.
 
+### Destaques por Projeto
 **🏢 BarberOS** — O case mais forte deste portfólio. Sistema real de gestão de barbearia, em produção com dados reais de clientes. Identifiquei bugs que causavam **prejuízo financeiro direto** (comissão calculada incorretamente), documentei com análise de impacto no negócio e propus correções priorizadas.
 
 **📱 Detailer App** — Estudo de caso completo de QA manual em aplicativo de terceiro. Escrevi 42 casos de teste em formato BDD, identifiquei 15 bugs com análise de severidade/prioridade e produzi relatório final com padrões de falha e recomendações.

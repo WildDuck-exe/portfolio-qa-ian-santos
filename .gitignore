@@ -46,3 +46,11 @@ build/
 *credential*
 *password*
 *secret*
+
+# AI/Session files (não versionar)
+.claude/
+.planning/
+SESSION_STATE.md
+Markdown.md*
+portfolio_qa_roadmap.html
+repomix*

@@ -229,7 +229,7 @@ Implementação em `lib/widgets/magic_bottom_nav.dart` — widget isolado que re
 
 ---
 
-## 12. Autora do Projeto
+## 12. Autor
 
 **Ian Santos** — Engenharia de Software  
 **Instituição:** Projeto de Extensão Universitária  

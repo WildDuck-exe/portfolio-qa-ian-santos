@@ -73,7 +73,7 @@ A avaliação de riscos segue os critérios:
 
 ---
 
-## 6. Autora
+## 6. Autor
 
 **Analista:** [NOME]  
 **Data:** [DATA]

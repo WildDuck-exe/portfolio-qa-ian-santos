@@ -95,7 +95,7 @@ detailer-app/
 - Validação de campos em frontend
 - Interface em português (com inconsistências observadas — ver bugs)
 
-## 6. Bugs Known
+## 6. Bugs Conhecidos
 
 | Bug ID | Descrição | Severidade | Prioridade |
 |--------|-----------|-----------|------------|
@@ -114,7 +114,8 @@ detailer-app/
 | BUG-013 | Sem feedback após cadastro de agendamento | Média | Alta |
 | BUG-014 | Lista/agenda não atualiza após cadastro de agendamento | Alta | Alta |
 | BUG-015 | Funcionalidade de desativação de serviço indisponível | Alta | Alta |
-| BUG-016 | (entrada vazia) | — | — |
+
+
 
 ## 7. Melhorias Identificadas
 
@@ -134,9 +135,9 @@ detailer-app/
 | Cadastro de Cliente | 12 | 5 | 7 |
 | Cadastro de Agendamento | 4 | 4 | 0 |
 
-**Taxa de sucesso geral: ~66%** (28 PASS / 42 total)
+**Taxa de sucesso geral: ~74%** (31 PASS / 42 total)
 
-## 9. Autora do Teste
+## 9. Autor
 
 **Ian Santos** — Analista QA
 

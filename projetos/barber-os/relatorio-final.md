@@ -60,7 +60,7 @@ O **BUG-004** força a equipe a realizar manualmente a exportação de dados, co
 4. **Corrigir BUG-004**: Expor o botão de exportação na interface, tornando a funcionalidade acessível.
 
 ### Médio Prazo
-5. Implementar as melhorias documentadas em `melhores.md`, especialmente:
+5. Implementar as melhorias documentadas em `melhorias.md`, especialmente:
    - Logs de auditoria (MT-001)
    - Backup automatizado (MT-002)
    - Dashboard de comissões (MI-001)

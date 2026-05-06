@@ -234,7 +234,7 @@ dist/jobpilot/
 
 ---
 
-## 11. Autora
+## 11. Autor
 
 **Ian Santos**  
 **Data:** 2026

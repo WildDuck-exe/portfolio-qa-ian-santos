@@ -14,7 +14,7 @@ Além dos bugs documentados, foram identificadas oportunidades de melhoria no si
 
 **Benefício:** Flexibilidade para profissionais com acordos diferentes, melhor adaptação ao modelo de negócio do cliente.
 
-** criticidade:** Média
+**Criticidade:** Média
 
 **Passos para implementação:**
 1. Adicionar campo "percentual de comissão" na tela de cadastro/edição de profissional
@@ -29,7 +29,7 @@ Além dos bugs documentados, foram identificadas oportunidades de melhoria no si
 
 **Benefício:** Redução de agendamentos esquecidos, melhoria no controle financeiro.
 
-** criticidade:** Baixa
+**Criticidade:** Baixa
 
 ---
 
@@ -39,7 +39,7 @@ Além dos bugs documentados, foram identificadas oportunidades de melhoria no si
 
 **Benefício:** Usabilidade aprimorada, mais produtividade no dia a dia.
 
-** criticidade:** Baixa
+**Criticidade:** Baixa
 
 ---
 
@@ -51,7 +51,7 @@ Além dos bugs documentados, foram identificadas oportunidades de melhoria no si
 
 **Benefício:** Transparencia com o profissional, redução de dúvidas e conflitos.
 
-** criticidade:** Média
+**Criticidade:** Média
 
 ---
 
@@ -61,7 +61,7 @@ Além dos bugs documentados, foram identificadas oportunidades de melhoria no si
 
 **Benefício:** Melhor experiência do usuário, indicando que o sistema está a processar.
 
-** criticidade:** Baixa
+**Criticidade:** Baixa
 
 ---
 
@@ -73,7 +73,7 @@ Além dos bugs documentados, foram identificadas oportunidades de melhoria no si
 
 **Benefício:** Rastreabilidade, conformidade, capacidade de investigar problemas.
 
-** criticidade:** Alta (especialmente em ambiente de produção com dados reais)
+**Criticidade:** Alta (especialmente em ambiente de produção com dados reais)
 
 ---
 
@@ -83,13 +83,13 @@ Além dos bugs documentados, foram identificadas oportunidades de melhoria no si
 
 **Benefício:** Proteção dos dados, continuidade do negócio em caso de falhas.
 
-** criticidade:** Alta
+**Criticidade:** Alta
 
 ---
 
 ## 5. Resumo das Melhorias
 
-| ID | Descrição | Tipo | criticidade | Esforço Estimado |
+| ID | Descrição | Tipo | Criticidade | Esforço Estimado |
 |---|---|---|---|---|
 | MF-001 | Comissão por profissional | Funcionalidade | Média | Médio |
 | MF-002 | Notificações de pendência | Funcionalidade | Baixa | Baixo |

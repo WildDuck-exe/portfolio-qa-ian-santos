@@ -1,190 +1,91 @@
-# Automações — [NOME DO PROJETO/USUÁRIO]
+# Automações — Portfólio QA
 
-## 1. Descrição
+## Descrição
 
-Este diretório contém scripts de automação utilizados no projeto de QA para aumentar a eficiência e reduzir tarefas repetitivas.
+Scripts de automação utilizados para converter planilhas de QA (.xlsx) em documentação Markdown formatada, reduzindo trabalho manual e padronizando a saída dos documentos.
 
 ---
 
-## 2. Scripts Disponíveis
+## Scripts Disponíveis
 
-### 2.1 [Script 1]
+### gerar_docs_qa.py
 
-**Arquivo:** `script1.py`  
-**Linguagem:** Python  
-**Descrição:** [Breve descrição do que o script faz]  
+**Arquivo:** `gerar_docs_qa.py`  
+**Linguagem:** Python 3  
+**Descrição:** Converte planilhas de casos de teste ou bugs (.xlsx) em documentação Markdown formatada com métricas automáticas.
+
 **Uso:**
 ```bash
-python script1.py [argumentos]
+# Gerar casos de teste
+python gerar_docs_qa.py --arquivo "planilha.xlsx" --projeto detailer-app
+
+# Gerar bug report
+python gerar_docs_qa.py --arquivo "bugs.xlsx" --projeto barber-os --tipo bugs
+
+# Especificar saída customizada
+python gerar_docs_qa.py --arquivo "dados.xlsx" --projeto klipper --saida output/resultado.md
 ```
 
 **Argumentos:**
+
 | Argumento | Descrição | Obrigatório |
-|-----------|-----------|-------------|
-| `--input` | Arquivo de entrada | Sim |
-| `--output` | Arquivo de saída | Não |
-| `--verbose` | Modo verboso | Não |
+|-----------|-----------|:-----------:|
+| `--arquivo` | Caminho da planilha .xlsx | ✅ |
+| `--projeto` | Nome da pasta do projeto | ✅ |
+| `--tipo` | Tipo de documento: `casos` ou `bugs` (padrão: `casos`) | ❌ |
+| `--saida` | Caminho de saída customizado | ❌ |
 
-**Exemplo:**
-```bash
-python script1.py --input data.csv --output result.json --verbose
+**Funcionalidades:**
+- Lê planilhas .xlsx com headers na primeira linha
+- Classifica automaticamente status (Passou/Falhou/Bloqueado)
+- Calcula métricas consolidadas (taxa de aprovação, contagem por severidade)
+- Emite avisos de qualidade (campos obrigatórios vazios)
+- Ignora linhas completamente vazias
+
+**Exemplo de saída:**
 ```
+[INFO] 42 registros lidos de 'Casos de Testes.xlsx'
 
-**Dependências:**
-- `pandas`
-- `openpyxl`
+[OK] Gerado: projetos/detailer-app/casos-de-teste.md
+     42 casos | ✅ 31 | ❌ 11 | ⚠️ 0 | ⬜ 0
+     Taxa de aprovação: 74%
+```
 
 ---
 
-### 2.2 [Script 2]
+## Configuração
 
-**Arquivo:** `script2.py`  
-**Linguagem:** Python  
-**Descrição:** [Breve descrição]  
-**Uso:**
-```bash
-python script2.py --mode [modo]
-```
-
-**Argumentos:**
-| Argumento | Descrição | Obrigatório |
-|-----------|-----------|-------------|
-| `--mode` | Modo de execução (dev/prod) | Sim |
-
-**Dependências:**
-- `requests`
-- `python-dotenv`
-
----
-
-### 2.3 [Script 3]
-
-**Arquivo:** `script3.sh`  
-**Linguagem:** Bash  
-**Descrição:** [Breve descrição]  
-**Uso:**
-```bash
-./script3.sh [argumentos]
-```
-
-**Dependências:**
-- `jq`
-- `curl`
-
----
-
-## 3. Configuração
-
-### 3.1 Variáveis de Ambiente
-
-Criar arquivo `.env` na raiz do diretório:
-
-```bash
-# API Keys
-API_KEY=
-
-# Configurações
-DEBUG=true
-MAX_RETRIES=3
-TIMEOUT=30
-
-# Paths
-DATA_DIR=./data
-OUTPUT_DIR=./output
-```
-
-### 3.2 Setup
+### Setup
 
 ```bash
 # Criar ambiente virtual
 python -m venv .venv
-source .venv/Scripts/activate  # Windows: .venv\Scripts\activate
+
+# Ativar (Windows)
+.venv\Scripts\activate
+
+# Ativar (Linux/Mac)
+source .venv/bin/activate
 
 # Instalar dependências
 pip install -r requirements.txt
 ```
 
----
+### Dependências
 
-## 4. Fluxos de Automação
-
-### 4.1 Fluxo 1: [Nome do Fluxo]
-
-```
-[Step 1] → [Step 2] → [Step 3] → [Output]
-   ↓          ↓          ↓           ↓
-[Script1]  [Script2]  [Script3]  [Relatório]
-```
-
-**Passos:**
-1. Executar `script1.py` com dados de entrada
-2. Executar `script2.py` para processar resultados
-3. Executar `script3.sh` para gerar relatório final
+- `openpyxl` >= 3.1.0
 
 ---
 
-## 5. Manutenção
+## Próximas Automações (Planejado)
 
-### 5.1 Logs
-
-Logs são gerados em:
-- `logs/script1.log`
-- `logs/script2.log`
-- `logs/script3.log`
-
-### 5.2 Scheduling
-
-Scripts podem ser agendados via cron (Linux) ou Task Scheduler (Windows):
-
-**Exemplo cron (Linux):**
-```cron
-# Executar diariamente às 9h
-0 9 * * * cd /path/to/automacoes && python script1.py >> logs/cron.log 2>&1
-```
-
-**Exemplo Task Scheduler (Windows):**
-```batch
-# Criar tarefa agendada
-schtasks /create /tn "JobPilot Daily" /tr "python script1.py" /sc daily /st 09:00
-```
+| Script | Descrição | Status |
+|--------|-----------|--------|
+| `gerar_docs_qa.py` | Conversor xlsx → Markdown | ✅ Implementado |
+| `metricas_qa.py` | Gerador de métricas consolidadas | 📋 Planejado |
+| `validar_links.py` | Verificador de links quebrados nos docs | 📋 Planejado |
 
 ---
 
-## 6. Troubleshooting
-
-### 6.1 Erro Comum: Módulo não encontrado
-
-**Solução:**
-```bash
-pip install -r requirements.txt
-```
-
-### 6.2 Erro Comum: Permissão negada
-
-**Solução:**
-```bash
-chmod +x script.sh
-```
-
-### 6.3 Erro Comum: Timeout
-
-**Solução:** Aumentar `TIMEOUT` no `.env` ou verificar conexão de rede
-
----
-
-## 7. Contribuição
-
-Para adicionar novos scripts:
-
-1. Criar script com nome descritivo (`YYYY_MM_DD_descricao.py`)
-2. Adicionar docstring com descrição e uso
-3. Adicionar logging
-4. Atualizar este README
-5. Adicionar requisitos em `requirements.txt`
-
----
-
-## 8. Autora
-
-**Ian Santos**  
+**Autor:** Ian Santos  
 **Data:** Maio 2026

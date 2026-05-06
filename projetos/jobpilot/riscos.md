@@ -151,7 +151,7 @@
 
 ---
 
-## 8. Autora
+## 8. Autor
 
 **Ian Santos**  
 **Data:** Maio 2026

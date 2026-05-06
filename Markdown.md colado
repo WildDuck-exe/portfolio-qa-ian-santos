@@ -1,0 +1,535 @@
+1. Estratégia geral do portfólio
+O portfólio tem quatro papéis complementares. Cada projeto responde a uma pergunta diferente que o recrutador vai ter na cabeça:
+Detailer App responde: "Você sabe analisar e documentar testes em um sistema real?"
+Apresentado como estudo de caso de QA manual em aplicativo de terceiro. O foco é a qualidade da documentação, não quem fez o app.
+BarberOS responde: "Você já testou algo que estava em produção com usuário real?"
+É o case mais forte porque tem bugs reais, impacto real no negócio do cliente e mostra maturidade para lidar com problemas em ambiente real.
+Klipper responde: "Você já entregou algo? Você tem senso de produto?"
+Apresentado como projeto de extensão/entrega real. Aqui você mostra que pensou no problema, construiu uma solução e consegue agora aplicar QA nela de forma retroativa.
+JobPilot responde: "Você vai além do burocrático? Você entende sistemas complexos?"
+Projeto autoral com IA. Mostra que você pensa em testes de integração, scraping, validação de dados e qualidade em sistemas com mais camadas.
+Qual priorizar primeiro? BarberOS e Detailer App, nessa ordem. O BarberOS tem bugs reais que você pode documentar agora — isso é ouro para um portfólio QA Jr. O Detailer App tem a planilha pronta, então a conversão para Markdown é rápida. Klipper e JobPilot vêm depois porque precisam de mais escrita de contexto.
+
+2. Estrutura recomendada do repositório
+portfolio-qa-ian-santos/
+├── README.md                        ← apresentação principal do portfólio
+├── sobre-mim.md                     ← versão expandida do seu perfil
+├── contato.md                       ← e-mail, LinkedIn, GitHub
+│
+├── projetos/
+│   ├── detailer-app/
+│   │   ├── README.md
+│   │   ├── plano-de-testes.md
+│   │   ├── casos-de-teste.md
+│   │   ├── bugs-reportados.md
+│   │   ├── melhorias.md
+│   │   └── relatorio-final.md
+│   │
+│   ├── barber-os/
+│   │   ├── README.md
+│   │   ├── plano-de-testes.md
+│   │   ├── casos-de-teste.md
+│   │   ├── bugs-reportados.md
+│   │   ├── plano-regressao.md
+│   │   ├── melhorias.md
+│   │   └── relatorio-final.md
+│   │
+│   ├── klipper/
+│   │   ├── README.md
+│   │   ├── funcionalidades.md
+│   │   ├── plano-de-testes.md
+│   │   └── melhorias.md
+│   │
+│   └── jobpilot/
+│       ├── README.md
+│       ├── arquitetura.md
+│       ├── plano-de-testes.md
+│       └── riscos.md
+│
+├── templates/
+│   ├── plano-de-testes.md           ← modelo em branco reutilizável
+│   ├── casos-de-teste.md
+│   ├── bug-report.md
+│   ├── relatorio-final.md
+│   ├── matriz-de-risco.md
+│   └── checklist-exploratorio.md
+│
+├── evidencias/
+│   ├── detailer-app/
+│   ├── barber-os/
+│   ├── klipper/
+│   └── jobpilot/
+│
+└── automacoes/
+    ├── gerar_docs_qa.py
+    ├── requirements.txt
+    └── README.md
+A pasta templates/ serve como vitrine extra — mostra que você pensa em padronização. A pasta automacoes/ pode começar vazia e ir crescendo.
+
+3. README principal — modelo pronto
+markdown# Portfólio QA — Ian Santos
+
+Olá! Sou Ian Santos, estudante de [seu curso] apaixonado por qualidade de software.
+Estou em transição para a área de QA e montei este portfólio para documentar minha
+evolução prática como analista de testes.
+
+## Sobre mim
+
+Tenho interesse em garantia de qualidade, análise de bugs, escrita de casos de teste
+e automação de testes. Não tenho experiência profissional formal em QA ainda, mas
+tenho trabalhado ativamente em projetos reais e estudos de caso para desenvolver
+essas habilidades.
+
+## O que estou buscando
+
+Vaga de QA Júnior, Analista de Testes ou Analista QA Manual, com interesse em
+evoluir para QA Automation.
+
+## Habilidades em desenvolvimento
+
+- Escrita de casos de teste (funcionais, negativos, limites)
+- Documentação de bugs com clareza e rastreabilidade
+- BDD / Gherkin (aprendendo)
+- Testes exploratórios
+- Análise de impacto de bugs
+- Testes manuais em web e mobile
+- Noções de API testing com Postman
+- Iniciando automação com Playwright
+
+## Ferramentas
+
+| Categoria       | Ferramentas                          |
+|-----------------|--------------------------------------|
+| Gestão de testes | Excel / Google Sheets               |
+| Documentação    | Markdown, GitHub                     |
+| API             | Postman (iniciante)                  |
+| Automação       | Playwright (aprendendo)              |
+| Versionamento   | Git / GitHub                         |
+
+## Projetos
+
+| Projeto | Tipo | Status | Destaques |
+|---------|------|--------|-----------|
+| [BarberOS](./projetos/barber-os/) | Case real com cliente | ✅ Documentado | Bugs reais, impacto real |
+| [Detailer App](./projetos/detailer-app/) | Estudo de caso QA | ✅ Documentado | 20+ casos de teste |
+| [Klipper](./projetos/klipper/) | Projeto de extensão | 🔄 Em andamento | Sistema real entregue |
+| [JobPilot](./projetos/jobpilot/) | Projeto autoral com IA | 🔄 Em andamento | QA em sistema com IA |
+
+## Como navegar
+
+Cada pasta de projeto tem seu próprio README com contexto, arquivos de casos de teste,
+bugs reportados e evidências. Comece pelo projeto que mais te interessar.
+
+## Contato
+
+- E-mail: seuemail@email.com
+- LinkedIn: linkedin.com/in/ian-santos
+- GitHub: github.com/ian-santos
+
+4. Modelo de apresentação por projeto
+Use este modelo como base para o README.md de cada projeto:
+markdown## Contexto
+[Onde esse projeto existe, quem usa, qual é o problema que ele resolve]
+
+## Meu papel
+[Fui testador / desenvolvedor / extensionista — seja honesto]
+
+## Objetivo deste documento
+[QA manual, estudo de caso, planejamento de testes, documentação de bugs...]
+
+## Escopo testado
+[O que foi testado: módulos, funcionalidades, fluxos]
+
+## Tipos de teste aplicados
+- Teste funcional
+- Teste negativo
+- Teste exploratório
+- Teste de regressão
+[liste apenas o que foi realmente feito]
+
+## Ferramentas usadas
+- [lista]
+
+## Entregáveis de QA
+- [plano-de-testes.md]
+- [casos-de-teste.md]
+- [bugs-reportados.md]
+- [relatorio-final.md]
+
+## Principais aprendizados
+[O que você aprendeu com esse projeto, seja técnico ou de processo]
+
+## Próximos passos
+[O que pode ser melhorado, testado ou automatizado ainda]
+
+5. Detailer App — estratégia específica
+Como apresentar: Deixe explícito no README que o Detailer App é um aplicativo de terceiro usado como objeto de estudo. Isso é honesto e profissional — muitos QAs fazem isso em entrevistas de emprego antes de ter experiência formal.
+Exemplo de texto para o README:
+markdown## Contexto
+
+O Detailer App é um aplicativo de gestão para empresas de estética automotiva.
+Não sou o desenvolvedor deste aplicativo. Utilizei-o como objeto de estudo para
+praticar análise de requisitos, escrita de casos de teste e documentação de bugs.
+
+## Meu papel
+
+Atuei como QA estudante: explorei o sistema, identifiquei funcionalidades,
+escrevi casos de teste, documentei bugs encontrados e propus melhorias.
+Como converter a planilha em Markdown:
+Sua planilha provavelmente tem colunas como ID, Título, Pré-condições, Passos, Resultado Esperado, Resultado Obtido, Status. No Markdown, cada caso de teste fica assim:
+markdown## CT-001 — Login com credenciais válidas
+
+| Campo             | Descrição                                      |
+|-------------------|------------------------------------------------|
+| Módulo            | Autenticação                                   |
+| Pré-condição      | Usuário cadastrado no sistema                  |
+| Tipo              | Funcional positivo                             |
+
+### Passos
+1. Acessar a tela de login
+2. Preencher e-mail válido
+3. Preencher senha correta
+4. Clicar em "Entrar"
+
+### Resultado esperado
+Usuário é redirecionado para o dashboard principal.
+
+### Resultado obtido
+✅ Passou
+
+### Evidência
+![CT-001](../../evidencias/detailer-app/CT-001-login-valido.png)
+Faça isso para cada linha da planilha. Se tiver muitos casos, o script Python da seção 12 vai automatizar isso.
+
+6. Klipper — estratégia específica
+markdown## Contexto
+
+O Klipper foi desenvolvido como atividade de extensão para uma barbearia da cidade.
+O objetivo era resolver o problema de agendamentos feitos por WhatsApp, que geravam
+confusão e perda de horários.
+
+## Problema identificado
+
+A barbearia gerenciava agendamentos manualmente via WhatsApp. Isso causava:
+- Duplos agendamentos no mesmo horário
+- Clientes sem confirmação
+- Barbeiro sem visão clara da agenda do dia
+
+## Solução proposta
+
+Sistema web simples de agendamento com:
+- Cadastro de clientes
+- Seleção de horários disponíveis
+- Confirmação automática
+- Visualização da agenda do barbeiro
+
+## Aprendizados
+
+[Liste o que você aprendeu: tecnologias, processo, comunicação com cliente real]
+
+## Limitações
+
+- Sem autenticação robusta
+- Sem envio de notificações automáticas
+- Testado em ambiente local, não em produção
+
+## Próximos passos
+
+- Adicionar testes automatizados
+- Validar fluxo de agendamento em diferentes dispositivos
+- Melhorar tratamento de conflitos de horário
+Documentos de QA que fazem sentido para o Klipper:
+
+plano-de-testes.md com os fluxos principais
+casos-de-teste.md para agendamento e cadastro de cliente
+melhorias.md com sugestões baseadas nos aprendizados do projeto
+
+
+7. BarberOS — bugs reais documentados profissionalmente
+Este é o coração do seu portfólio. Veja como documentar cada bug:
+markdown## BUG-001 — Cálculo de comissão sempre fixado em 40%
+
+| Campo          | Descrição                                                  |
+|----------------|------------------------------------------------------------|
+| ID             | BUG-001                                                    |
+| Módulo         | Fechamento de Atendimento / Comissão                       |
+| Severidade     | Alta                                                       |
+| Prioridade     | Alta                                                       |
+| Status         | Aberto                                                     |
+| Reportado em   | [data]                                                     |
+| Reportado por  | Ian Santos                                                 |
+
+### Descrição
+Ao fechar um atendimento, o sistema aplica automaticamente 40% de comissão
+para qualquer barbeiro, independente do percentual configurado no cadastro.
+
+### Passos para reproduzir
+1. Acessar o cadastro de um barbeiro e verificar que a comissão está configurada
+   com valor diferente de 40% (ex: 30%)
+2. Criar um novo agendamento para esse barbeiro
+3. Fechar o atendimento
+4. Verificar o valor de comissão calculado no fechamento
+
+### Resultado esperado
+Comissão calculada com base no percentual configurado no cadastro do barbeiro.
+
+### Resultado obtido
+Comissão calculada sempre com 40%, independente do cadastro.
+
+### Impacto no negócio
+Barbeiros com comissão configurada abaixo de 40% recebem valores incorretos,
+gerando prejuízo financeiro direto ao dono e conflito com os funcionários.
+
+### Evidência
+![BUG-001](../../evidencias/barber-os/BUG-001-comissao-fixa-40.png)
+Repita esse formato para os outros 3 bugs:
+
+BUG-002 — Agendamento não exibe dias anteriores
+BUG-003 — Dificuldade para fechar agendamentos antigos
+BUG-004 — Botão de exportar dados financeiros ausente no frontend
+
+
+8. JobPilot — estratégia e plano de testes
+markdown## Visão do produto
+
+O JobPilot é uma ferramenta pessoal para automatizar a busca e candidatura em vagas
+de emprego. O sistema faz scraping em sites de vagas, filtra oportunidades com
+base no perfil do usuário, gera currículos personalizados com IA e envia
+candidaturas por e-mail.
+
+## Problema que resolve
+
+Buscar vagas manualmente é repetitivo, lento e não escala. O JobPilot centraliza
+esse processo e usa IA para personalizar a abordagem em cada candidatura.
+
+## Fluxo principal
+
+1. Scraping de vagas em sites-alvo
+2. Filtro por palavras-chave, cargo e localização
+3. Análise da vaga com IA (compatibilidade com perfil)
+4. Geração de currículo personalizado
+5. Envio da candidatura por e-mail
+6. Registro no banco de dados e exibição no dashboard
+Plano de testes por tipo:
+TipoO que testarScrapingVagas são coletadas corretamente? E quando o site muda o layout?FiltrosFiltro por cargo, cidade e palavras-chave retorna resultados corretos?IACurrículo gerado reflete as informações da vaga e do candidato?BancoVagas são salvas sem duplicidade?DashboardDados exibidos batem com o banco?IntegraçãoFluxo completo (scraping → filtro → currículo → envio) funciona?ErrosO sistema se comporta bem quando o scraping falha? Quando a IA não responde?SegurançaCredenciais de e-mail não ficam expostas em logs?
+
+9. Templates reutilizáveis
+Template de Bug Report
+markdown## BUG-[ID] — [Título curto e descritivo]
+
+| Campo        | Valor           |
+|--------------|-----------------|
+| ID           | BUG-[ID]        |
+| Módulo       |                 |
+| Severidade   | Crítica / Alta / Média / Baixa |
+| Prioridade   | Alta / Média / Baixa |
+| Status       | Aberto / Em análise / Corrigido / Fechado |
+| Reportado em |                 |
+
+### Descrição
+[O que está errado, em uma ou duas frases]
+
+### Passos para reproduzir
+1. 
+2. 
+3. 
+
+### Resultado esperado
+[O que deveria acontecer]
+
+### Resultado obtido
+[O que está acontecendo de fato]
+
+### Impacto no negócio
+[Quem é afetado, qual é o prejuízo]
+
+### Evidência
+![BUG-ID](../../evidencias/[projeto]/BUG-[ID]-[descricao].png)
+Template de Caso de Teste
+markdown## CT-[ID] — [Título do cenário]
+
+| Campo         | Valor                    |
+|---------------|--------------------------|
+| Módulo        |                          |
+| Tipo          | Funcional / Negativo / Limite / Regressão |
+| Pré-condição  |                          |
+| Prioridade    | Alta / Média / Baixa     |
+
+### Passos
+1. 
+2. 
+3. 
+
+### Resultado esperado
+
+
+### Resultado obtido
+
+
+### Status
+[ ] Passou  [ ] Falhou  [ ] Bloqueado  [ ] Não executado
+
+### Evidência
+Template de Plano de Testes
+markdown## Plano de Testes — [Projeto]
+
+### Objetivo
+[O que será testado e por quê]
+
+### Escopo
+**Incluído:** [módulos e fluxos que serão testados]
+**Excluído:** [o que não será testado neste ciclo]
+
+### Tipos de teste
+- [ ] Funcional
+- [ ] Negativo
+- [ ] Exploratório
+- [ ] Regressão
+- [ ] API
+- [ ] Automação
+
+### Critérios de entrada
+[Quando o teste começa: build disponível, dados de teste prontos, etc.]
+
+### Critérios de saída
+[Quando o teste termina: X% de casos executados, todos os bugs críticos corrigidos, etc.]
+
+### Cronograma estimado
+| Atividade | Estimativa |
+|-----------|-----------|
+| Escrita dos casos | |
+| Execução | |
+| Relatório | |
+
+### Riscos
+| Risco | Probabilidade | Impacto | Mitigação |
+|-------|--------------|---------|-----------|
+| | | | |
+
+10. Organização de evidências
+Padrão de nomenclatura:
+BUG-001-comissao-fixa-40.png
+BUG-002-agendamento-dias-anteriores.png
+CT-001-login-valido.png
+CT-005-cadastro-cliente-campo-vazio.png
+VIDEO-001-fluxo-agendamento-completo.webm
+Regra simples: TIPO-NÚMERO-descricao-curta.extensão
+Como referenciar no Markdown:
+markdown### Evidência
+![Descrição da evidência](../../evidencias/barber-os/BUG-001-comissao-fixa-40.png)
+
+> Para vídeos, adicione um link direto:
+> [Ver vídeo: Fluxo de agendamento](../../evidencias/barber-os/VIDEO-001-fluxo-agendamento.webm)
+
+11 e 12. Automações — script Python
+Faça primeiro: o script de converter .xlsx em Markdown. Ele vai economizar muito tempo com o Detailer App.
+Faça depois: relatório com métricas, GitHub Actions.
+Faça por último: Playwright, Newman — só depois que a documentação manual estiver sólida.
+Esqueleto do script automacoes/gerar_docs_qa.py:
+python"""
+gerar_docs_qa.py
+Converte planilhas de QA (.xlsx) em documentação Markdown.
+
+Dependências: pip install openpyxl
+Uso: python gerar_docs_qa.py --projeto detailer-app --arquivo "Casos de Testes.xlsx"
+"""
+
+import openpyxl
+import argparse
+import os
+
+def ler_planilha(caminho):
+    wb = openpyxl.load_workbook(caminho)
+    ws = wb.active
+    headers = [cell.value for cell in ws[1]]
+    rows = []
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        rows.append(dict(zip(headers, row)))
+    return rows
+
+def gerar_casos_de_teste(rows, saida):
+    linhas = ["# Casos de Teste\n"]
+    aprovados, reprovados, bloqueados = 0, 0, 0
+    for row in rows:
+        ct_id = row.get("ID", "???")
+        titulo = row.get("Título", "Sem título")
+        status = str(row.get("Status", "")).strip()
+        if "passou" in status.lower() or "ok" in status.lower():
+            aprovados += 1
+            status_icon = "✅ Passou"
+        elif "falhou" in status.lower():
+            reprovados += 1
+            status_icon = "❌ Falhou"
+        else:
+            bloqueados += 1
+            status_icon = "⚠️ Bloqueado"
+        
+        # aviso se campo importante vazio
+        if not row.get("Resultado Esperado"):
+            print(f"[AVISO] {ct_id} está sem Resultado Esperado!")
+        
+        linhas.append(f"## {ct_id} — {titulo}\n")
+        linhas.append(f"**Status:** {status_icon}\n")
+        linhas.append(f"**Módulo:** {row.get('Módulo', '')}\n")
+        linhas.append(f"**Resultado esperado:** {row.get('Resultado Esperado', '')}\n")
+        linhas.append("---\n")
+    
+    linhas.append(f"\n## Métricas\n")
+    total = aprovados + reprovados + bloqueados
+    linhas.append(f"- Total: {total}\n- ✅ Aprovados: {aprovados}\n- ❌ Reprovados: {reprovados}\n- ⚠️ Bloqueados: {bloqueados}\n")
+    
+    with open(saida, "w", encoding="utf-8") as f:
+        f.writelines(linhas)
+    print(f"Gerado: {saida}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--arquivo", required=True)
+    parser.add_argument("--projeto", required=True)
+    args = parser.parse_args()
+    
+    rows = ler_planilha(args.arquivo)
+    saida = f"projetos/{args.projeto}/casos-de-teste.md"
+    os.makedirs(os.path.dirname(saida), exist_ok=True)
+    gerar_casos_de_teste(rows, saida)
+
+13. Playwright — plano futuro em fases
+Só entre nessa parte depois que toda a documentação manual estiver publicada. A sequência:
+Fase 1 — Configurar: npm init playwright@latest no repositório, configurar playwright.config.js com URL base do projeto.
+Fase 2 — Login: Automatizar login no BarberOS. É o teste mais simples e valida que o ambiente está funcionando.
+Fase 3 — Fluxo principal: Automatizar criação de agendamento (BarberOS) ou busca de vaga com filtro (JobPilot).
+Fase 4 — Validações: Testar mensagens de erro (campo vazio, dados inválidos).
+Fase 5 — CI: Configurar GitHub Actions para rodar os testes a cada push.
+Isso no portfólio vale muito porque transforma "estou aprendendo Playwright" em "meus testes rodam automaticamente no CI".
+
+14. Testes de API
+Para o BarberOS, os endpoints mais valiosos para testar:
+
+POST /agendamentos — criar agendamento com dados válidos e inválidos
+GET /agendamentos — verificar se retorna corretamente com e sem filtros de data
+POST /fechamento — verificar se o cálculo de comissão está correto no body da resposta
+GET /financeiro/exportar — verificar se o endpoint existe no backend (documentando o bug do frontend)
+
+Exporte a collection como collection.json e suba no repositório. Gere um screenshot da execução como evidência. Isso já é suficiente para um portfólio Jr.
+
+15 e 16. Ordem prática — GSD
+Dias 1–3 (versão publicável):
+
+Criar estrutura do repositório no GitHub
+Escrever README principal
+Documentar os 4 bugs do BarberOS (já tem o material, é só formalizar)
+Converter a planilha do Detailer App em Markdown
+
+Dias 4–7 (portfólio completo v1):
+
+Documentar Klipper com README + plano de testes
+Documentar JobPilot com README + arquitetura + plano de testes
+Organizar evidências e referenciar nos documentos
+
+Semana 2+ (evolução contínua):
+
+Escrever script Python para automação de Markdown
+Criar collections Postman para BarberOS
+Iniciar automação Playwright com o fluxo de login
+
+O critério simples para publicar a primeira versão é: os dois primeiros projetos documentados + README principal funcionando. Isso já é um portfólio apresentável para candidaturas. O resto vem como evolução.

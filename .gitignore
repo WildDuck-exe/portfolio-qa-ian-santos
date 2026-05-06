@@ -47,10 +47,11 @@ build/
 *password*
 *secret*
 
-# AI/Session files (não versionar)
+# AI/Session/Personal files (não versionar)
 .claude/
 .planning/
 SESSION_STATE.md
 Markdown.md*
 portfolio_qa_roadmap.html
 repomix*
+linkedin-post.md

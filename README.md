@@ -1,4 +1,4 @@
-<![CDATA[# 🧪 Portfólio QA — Ian Santos
+# 🧪 Portfólio QA — Ian Santos
 
 ![Projetos](https://img.shields.io/badge/Projetos_Documentados-4-blue?style=for-the-badge)
 ![Bugs](https://img.shields.io/badge/Bugs_Reportados-28+-red?style=for-the-badge)
@@ -148,4 +148,4 @@ Este repositório é um portfólio pessoal de documentação de QA. O conteúdo 
 ---
 
 *Última atualização: Maio 2026*
-]]>
+
